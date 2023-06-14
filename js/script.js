@@ -1,27 +1,25 @@
 
 
-const ul = document.querySelector('.ul')
-
+const ul = document.getElementById('link')
+let text 
 for(let number = 1 ; number <= 100; number++) {
-    console.log ('number', number, typeof number)
 
    
+    if (number % 3 == 0 && number % 5 == 0  ) {
+        text = 'fizzbuzz'
+    }
+    else if(number % 3 == 0 ) {
+       text = 'fizz'
+
+    }
+    else if(number % 5 == 0 ) {
+        text = 'buzz'
+        
+    }
     
-    if (number % 3 == 0 ) {
-        console.log (number, 'fizz')
-
+    else {
+    text = number
     }
-
-     if(number % 5 == 0 ) {
-        console.log (number,'buzz')
-
-    }
-
-     if (number % 3 == 0 && number % 5 == 0  ) {
-        console.log (number,'fizzbuzz')
-
-    }
-   
-    //  ul.innerHTML += ` <li>${number}</li>`
+     ul.innerHTML += ` <li>${text} </li>`
 
 }
